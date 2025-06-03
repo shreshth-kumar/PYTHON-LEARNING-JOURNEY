@@ -22,3 +22,8 @@ print(num) #20
 #logical operaotrs
 print(not False) #True
 print(not (a > b)) #False
+
+val1 = True
+val2 = False
+print("and operaotrs:", val1 and val2) #False (Ture if both values are True and false if either one of the operators is False)
+print("OR operators:", val1 or val2) #True

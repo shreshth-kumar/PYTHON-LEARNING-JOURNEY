@@ -2,4 +2,4 @@
 
 a = int(input("side of the square ="))
 
-print("area of the square is :", 4 *a)
+print("area of the square is :", a*a)
