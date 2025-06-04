@@ -1,4 +1,4 @@
-# 🎲 Dice Roll Simulator
+# Dice Roll Simulator
 
 This is a simple Python project to simulate rolling two dice N times and analyze the results using NumPy.
 
