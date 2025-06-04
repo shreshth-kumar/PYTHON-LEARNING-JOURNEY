@@ -1,10 +1,10 @@
-# 💼 Personal Expense Tracker (Python CLI Project)
+# Personal Expense Tracker (Python CLI Project)
 
 A simple and beginner-friendly command-line Python project to help you track your daily expenses. You can add, view, filter, and analyze your spending using a CSV file to store the data.
 
 ---
 
-## 📌 Features
+## Features
 
 - Add new expenses (date, category, amount, note)
 - View all saved expenses in a table format
