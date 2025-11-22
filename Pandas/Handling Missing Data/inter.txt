@@ -1,0 +1,13 @@
+10
+20
+NaN
+40 
+50 
+
+linear 
+
+1- preserve daya intergrity
+2- smooth trends
+3- avoid data loss
+
+interpolate() 

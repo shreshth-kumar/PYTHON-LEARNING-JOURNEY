@@ -9,14 +9,14 @@ data ={
 
 df = pd.DataFrame(data)
 
-# high_salary = df[df['Salary'] > 50000]
-# print('Employees with salary > 50000')
-# print(high_salary)
+high_salary = df[df['Salary'] > 50000]
+print('Employees with salary > 50000')
+print(high_salary)
 
-# #filtering rows salary > 50k & age > 30
-# filtered = df[(df['Age'] > 30) & (df['Salary'] > 50000)]
-# print(f'Employee list Age >30 + Salary > 50000')
-# print(filtered)
+#filtering rows salary > 50k & age > 30
+filtered = df[(df['Age'] > 30) & (df['Salary'] > 50000)]
+print(f'Employee list Age >30 + Salary > 50000')
+print(filtered)
 
 #using OR condition
 filtered_or = df[(df['Age'] > 35) | (df['Performance_Score'] > 90)]

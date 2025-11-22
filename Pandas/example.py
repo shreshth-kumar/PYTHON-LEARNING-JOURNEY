@@ -20,3 +20,4 @@ print(name)
 subset = df[["Name", "Salary"]]
 print('\nSubset with Name and Salary')
 print(subset)
+

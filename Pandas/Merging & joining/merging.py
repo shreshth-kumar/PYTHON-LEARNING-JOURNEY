@@ -32,7 +32,3 @@ print(df_merged)
 df_merged = pd.merge(df_customers, df_orders, on="CustomerID", how="right")
 print('right join')
 print(df_merged)
-#cross join
-df_merged = pd.merge(df_customers, df_orders, on="CustomerID", how="cross")
-print('cross join')
-print(df_merged)
