@@ -1,3 +1,10 @@
+import turtle
+
+WIDTH, HEIGHT = 500, 500
+
+screen = turtle.Screen()
+screen.setup(WIDTH, HEIGHT)
+
 def get_number_of_racers():
     racer = 0 
     while True:
