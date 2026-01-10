@@ -1,9 +1,9 @@
 import turtle
+import time
+import random
 
 WIDTH, HEIGHT = 500, 500
-
-screen = turtle.Screen()
-screen.setup(WIDTH, HEIGHT)
+COLORS = ['rad', 'green', 'blue', 'orange', 'yellow', 'black', 'purple', 'pink', 'brown', 'cyan']
 
 def get_number_of_racers():
     racer = 0 
@@ -20,5 +20,13 @@ def get_number_of_racers():
         else:
             print('number not in range 2-10. Try Again!')
 
+def init_turtle():
+    screen = turtle.Screen()
+    screen.setup(WIDTH, HEIGHT)
+    screen.title("Turtle Racing!")
+
 racers = get_number_of_racers()
-print(racers)
+init_turtle()
+random.shuffle(COLORS)
+colors = COLORS[:racers]
+print(colors)
