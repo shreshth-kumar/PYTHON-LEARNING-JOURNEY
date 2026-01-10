@@ -1,5 +1,6 @@
 import curses
 from curses import wrapper
+import time
 
 def start_screen(stdscr):
     stdscr.clear()
@@ -10,6 +11,7 @@ def start_screen(stdscr):
 
 def display_text(stdscr, target, current, wpm=0):
     stdscr.addstr(target)
+    stdscr.addstr(1, 0, f"wpm : {wpm}")
 
     for i, char in enumerate(current):
         correct_char = target[i]
@@ -23,8 +25,13 @@ def display_text(stdscr, target, current, wpm=0):
 def wpm_test(stdscr):
     target_text = "Hello world this is some test text for this app"
     current_text = []
-    
+    wpm = 0
+    start_time = time.time()
+
     while True:
+        time_elapsed = max(time.time() - start_time, 1)
+        wpm = round((len(current_text) / (time_elapsed / 60)) / 5)
+
         stdscr.clear()
         display_text(stdscr, target_text, current_text, wpm=0)
         stdscr.refresh()
