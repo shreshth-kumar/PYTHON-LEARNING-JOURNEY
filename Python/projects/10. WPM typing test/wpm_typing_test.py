@@ -19,7 +19,7 @@ def display_text(stdscr, target, current, wpm=0):
         if char != correct_char:
             color = curses.color_pair(2)
 
-        stdscr.addstr(0, i, char)
+        stdscr.addstr(0, i, char, color)
 
 
 def wpm_test(stdscr):
@@ -34,7 +34,7 @@ def wpm_test(stdscr):
         wpm = round((len(current_text) / (time_elapsed / 60)) / 5)
 
         stdscr.clear()
-        display_text(stdscr, target_text, current_text, wpm=0)
+        display_text(stdscr, target_text, current_text, wpm=wpm)
         stdscr.refresh()
 
         if "".join(current_text) == target_text:
