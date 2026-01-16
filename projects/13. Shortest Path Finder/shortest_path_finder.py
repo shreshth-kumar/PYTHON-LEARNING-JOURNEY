@@ -37,6 +37,33 @@ def find_path(maze, stdscr):
     end = "X"
     start_pos = find_start(maze, start)
 
+    q = queue.Queue()
+    q.put((start_pos, [start_pos]))
+
+    visited = set()
+    while not q.empty():
+        current_pos, path = q.get()
+        row, col = current_pos
+
+        if maze[row][col] == end:
+            return path
+        
+
+def find_neighbors(maze, row, col):
+    neighbors = []
+
+    if row > 0:
+        neighbors.append((row -1 , col))
+    if row + 1 < len(maze):
+        neighbors.append((row + 1, col))
+    if col > 0:
+        neighbors.append((row, col - 1))
+    if col + 1 < len(maze[0]):
+        neighbors.append((row, col + 1))
+
+    return neighbors
+    
+
 def main(stdscr):
     curses.init_pair(1, curses.COLOR_BLUE, curses.COLOR_BLACK)
     curses.init_pair(2, curses.COLOR_RED, curses.COLOR_BLACK)
